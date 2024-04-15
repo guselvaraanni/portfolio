@@ -1,0 +1,12 @@
+.skills {
+  width: 50%; /* Adjust width to 100% for mobile view */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media only screen and (max-width: 768px) {
+  .skills {
+    width: 90%; /* Adjust width to 90% for smaller screens */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+}

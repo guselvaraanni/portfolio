@@ -1,0 +1,33 @@
+/* About.css */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gif-container {
+  max-width: 50%;
+}
+
+.text-content {
+  max-width: 40%;
+  padding-left: 30px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .text-content, .gif-container {
+    max-width: 50%;
+  }
+}
+h1{
+  text-align: center;
+  padding: 10px;
+
+}
+
+

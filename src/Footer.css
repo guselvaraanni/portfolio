@@ -1,0 +1,82 @@
+/* Footer.css */
+.footer {
+  background-color: #f8f9fa;
+  padding-left: 20px;
+  color: black;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-info-container {
+  max-width: 400px; /* Reduce max-width for better responsiveness */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-item {
+  margin-bottom: 10px; /* Reduce margin for better spacing */
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 20px; /* Reduce icon size for better alignment */
+  margin-right: 5px; /* Adjust margin for better spacing */
+}
+
+.contact-info h3 {
+  margin: 0;
+  font-size: 16px; /* Reduce font size for better readability */
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 14px; /* Reduce font size for better readability */
+}
+
+.subscribe-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right for responsiveness */
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 150px; /* Increase width for better visibility */
+}
+
+.subscribe-button:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .footer {
+    justify-content: center; /* Center items on smaller screens */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .contact-info-container {
+    max-width: 100%; /* Allow contact info to take full width */
+    margin-bottom: 20px; /* Add margin at the bottom for better spacing */
+  }
+
+  .subscribe-button-container {
+    align-items: center; /* Center button container on smaller screens */
+  }
+
+  .subscribe-button {
+    width: auto; /* Allow button to adjust width */
+  }
+}

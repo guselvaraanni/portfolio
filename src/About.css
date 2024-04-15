@@ -1,0 +1,57 @@
+/* About.css */
+
+.about {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.gif-container {
+  flex: 1;
+  padding-right: 20px; /* Add some space between the image and text */
+}
+
+.gif-container img {
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+  display: block;
+  margin: auto;
+  animation: slightMovement 5s infinite alternate; /* Slight movement animation */
+}
+
+@keyframes slightMovement {
+  0% {
+    transform: translateX(-10px); /* Move slightly left */
+  }
+  100% {
+    transform: translateX(10px); /* Move slightly right */
+  }
+}
+
+.about p {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  animation: fadeIn 3s both; /* Fade-in animation for text */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.text-content {
+  padding-left: 10px;
+  max-width: 800px /* Adjust as needed */
+}
+
+
