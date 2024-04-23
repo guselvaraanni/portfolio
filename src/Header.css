@@ -26,7 +26,7 @@
   font-weight: bold;
   text-decoration: none;
   color: #fff;
-  margin-top:  7px;
+  margin-top: 7px;
   margin-left: 5px;
 }
 
@@ -47,9 +47,21 @@
 
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show the menu icon for mobile view */
+    cursor: pointer;
+    align-items: right;
+    margin-right: 600px; /* Add this line to move the icon to the right */
+  }
+
   .nav ul {
     flex-direction: column;
     align-items: center;
+    display: none;
+  }
+
+  .nav ul.open {
+    display: flex;
   }
 
   .nav ul li {
@@ -59,29 +71,3 @@
     text-align: center;
   }
 }
-
-/* Header.css */
-.menu-icon {
-  display: none; /* Initially hide the menu icon */
-  cursor: pointer;
-}
-
-.menu-icon.open .line:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
-}
-
-.menu-icon.open .line:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-icon.open .line:nth-child(3) {
-  transform: translateY(-5px) rotate(-45deg);
-}
-
-/* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block; /* Show the menu icon for mobile view */
-  }
-}
-

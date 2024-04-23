@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Chart } from 'chart.js';
+import { Chart } from "chart.js";
 
 import "./Content.css";
 import "./Home.css";
@@ -9,8 +9,15 @@ import "./Skills.css";
 import "./Experience.css";
 import "./Project.css";
 import "./Skills.css";
-import { Bar } from 'react-chartjs-2';
-import {  CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import { Bar } from "react-chartjs-2";
+import {
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
 Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -19,37 +26,36 @@ const Content = () => {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
-        title:'skills'
+        position: "top",
+        title: "skills",
       },
       title: {
         display: false,
-      }
-    }
+      },
+    },
   };
 
   const data = {
-    labels: ['Java', 'Python', 'C' , 'c++'],
+    labels: ["Java", "Python", "C", "c++"],
     datasets: [
       {
-        label:'programming skills',
+        label: "programming skills",
         data: [90, 80, 10, 20],
-        backgroundColor: 'rgb(204, 204, 255)'
-      }
-    ]
+        backgroundColor: "rgb(204, 204, 255)",
+      },
+    ],
   };
 
   const data2 = {
-    labels: ['MongoDB', 'React', 'html', 'css' , 'Flask' , 'AWS'],
+    labels: ["MongoDB", "React", "html", "css", "Flask", "AWS"],
     datasets: [
       {
-        label:'Technologies',
-        data: [70 , 60 , 90 , 50 ,60 , 10],
-        backgroundColor: '#99ccff'
-      }
-    ]
+        label: "Technologies",
+        data: [70, 60, 90, 50, 60, 10],
+        backgroundColor: "#99ccff",
+      },
+    ],
   };
-
 
   const ImageOverlay = ({ imageUrl, text }) => {
     return (
@@ -61,6 +67,8 @@ const Content = () => {
       </div>
     );
   };
+
+  
 
   return (
     <div>
@@ -104,20 +112,72 @@ const Content = () => {
         </div>
       </div>
 
-      <div id="skills" className="skills" >
+      <div id="skills" className="skills">
         <h1>Skills</h1>
         <div>
-        <h2 style={{textAlign:"center"}}>Programming skills</h2>
-        <Bar options={options} data={data}  />
+          <h2 style={{ textAlign: "center" }}>Programming skills</h2>
+          <Bar options={options} data={data} />
         </div>
         <div>
-        <h2 style={{textAlign:'center'}}>Technologies</h2>
-        <Bar options={options} data={data2}  />
+          <h2 style={{ textAlign: "center" }}>Technologies</h2>
+          <Bar options={options} data={data2} />
         </div>
       </div>
 
-      <div id="experience" className="experience">
+      <div id="experience">
         <h1>Experience</h1>
+      </div>
+      <div id="experience" className="experience">
+        <div className="experience-content">
+          <div className="experience-container">
+            <img src="/assets/IITM.jpg" alt="IITM GIF" />
+          </div>
+          <div className="text-content">
+            <h2>IITM Research Park</h2>
+            <h4>Internship - Full time</h4>
+            <p>
+              <h5>Motorz Team , IITMRP </h5>
+              • Administered MongoDB and integrated Flask API for Motor Mojo
+              (MM) project , automating motor design from user inputs. <br />
+              • Implemented HTTP methods in Python (Flask) for MM <br />
+              • Executed 124 motor design calculations in Python <br />
+              • Integrated OAuth2 authentication for login/signup pages on AWS
+              using Cognito and Flask, and hosted MongoDB in AWS. <br />
+              • Successfully completed anddeployed MDT on AWS cloud for
+              <br />
+              operational use.
+              <h5> PiLabz, Zoho</h5>
+              <br /> • Developed PiCAD, a software tool merging mechanical and
+              electrical software for streamlined engineering design.
+              <br />• Customized FreeCAD ,a design software with extra features,
+              integrated KiCAD, and developed 2D PCB stator design.
+              <br />• Single-handedly managed the first release of PiCAD on
+              Windows, including creating a Windows installer for the PiCAD
+              using NSIS.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="experience"className="experience">
+      <div className="experience-content">
+            <div className="experience-container">
+              <img src="/assets/reccsar.jpg" alt="IITM GIF" />
+            </div>
+            <div className="text-content"><p>
+            <h2>Reccsar Private Limited</h2>
+              <h4>Remote Internship</h4>•
+            Successfully completed a 6-month remote internship in Fullstack Web
+            Development utilizing the MERN stack. <br />
+            • Focused on mastering React
+            and MongoDB through web page development, contributing to robust web
+            apps</p>
+              </div>
+            
+          </div>
+          </div>
+
+      <div id="education" className="education">
+        <h1>Education</h1>
         <div className="about-content">
           <div className="gif-container">
             <img src="/assets/education.jpg" alt="About GIF" />
@@ -126,21 +186,17 @@ const Content = () => {
             <h2>Psna College of Engineering and Technology</h2>
             <h4>B.Tech Information Technologies</h4>
             <p>
-              I am Currently pursing III yr B.Tech Information Technology in PSNA 
+              I am Currently pursing III yr B.Tech Information Technology in
+              PSNA
             </p>
           </div>
         </div>
       </div>
 
-      <div id="education" className="education">
-        <h1>Education</h1>
-        <p>This is my education page</p>
-      </div>
-
       <div id="projects">
         <h1>Projects</h1>
       </div>
-      <div id="projects" className="project">        
+      <div id="projects" className="project">
         <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />
         <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />
         <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />

@@ -21,12 +21,13 @@ const Header = () => {
   return (
     <div>
       <nav className='nav'>
+      <div className='menu-icon' onClick={toggleMenu}>
+          <FaBars /> 
+        </div>
         <div onClick={() => scrollToSection('home')} className='site-title'>
           My Portfolio
         </div>
-        <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          <FaBars /> 
-        </div>
+        
         <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
           <li onClick={() => scrollToSection('home')}>
             <Link to='/home'>Home</Link>
@@ -47,7 +48,7 @@ const Header = () => {
             <Link to='/projects'>Projects</Link>
           </li>
           <li onClick={() => scrollToSection('contact')}>
-            <Link to='/contact'>Contatct</Link>
+            <Link to='/contact'>Contact</Link>
           </li>
         </ul>
       </nav>
