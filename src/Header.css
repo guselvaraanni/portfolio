@@ -2,12 +2,17 @@
   background-color: black;
   color: #fff;
   padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-right: 30px;
   display: flex;
   justify-content: flex-end;
 }
@@ -45,13 +50,14 @@
   color: #ff0707;
 }
 
-/* Media query for screens smaller than 768px */
+.menu-icon {
+  display: none; /* Hide the menu icon by default */
+}
+
 @media (max-width: 768px) {
   .menu-icon {
     display: block; /* Show the menu icon for mobile view */
     cursor: pointer;
-    align-items: right;
-    margin-right: 600px; /* Add this line to move the icon to the right */
   }
 
   .nav ul {

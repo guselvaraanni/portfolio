@@ -2,66 +2,78 @@
 
 /* Container for grid cards */
 .project {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-auto-rows: minmax(300px, auto); /* Set minimum row height */
-    gap: 20px; /* Gap between grid items */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-auto-rows: minmax(300px, auto); /* Set minimum row height */
+  gap: 20px; /* Gap between grid items */
+}
+
+/* Individual card */
+.card {
+  position: relative;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Image within the card */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Overlay for image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Show overlay on hover */
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* Text within the overlay */
+.text {
+  color: white;
+  font-size: 16px; /* Adjust text size */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 1024px) {
+  .project {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
   }
-  
-  /* Individual card */
+
   .card {
-    position: relative;
-    overflow: hidden;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* Remove right margin for cards on tablets */
   }
-  
-  /* Image within the card */
-  .image {
-    display: block;
-    width: 100%;
-    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for mobile screens */
+    gap: 10px; /* Reduce gap for mobile screens */
   }
-  
-  /* Overlay for image */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    transition: .5s ease;
-    opacity: 0; /* Initially hidden */
+
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+    /* Remove margins for cards on mobile screens */
   }
-  
-  /* Show overlay on hover */
-  .card:hover .overlay {
-    opacity: 1;
-  }
-  
-  /* Text within the overlay */
-  .text {
-    color: white;
-    font-size: 16px; /* Adjust text size */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  /* Responsive styles for smaller screens */
-  @media screen and (max-width: 768px) {
-    .project {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
-    }
-  
-    .card {
-      margin-left: 10px;
-      margin-right:10px ;
-     /* Remove right margin for cards on smaller screens */
-    }
-  }
-  
+}

@@ -9,6 +9,7 @@ import "./Skills.css";
 import "./Experience.css";
 import "./Project.css";
 import "./Skills.css";
+import "./Education.css";
 import { Bar } from "react-chartjs-2";
 import {
   CategoryScale,
@@ -67,8 +68,6 @@ const Content = () => {
       </div>
     );
   };
-
-  
 
   return (
     <div>
@@ -158,36 +157,48 @@ const Content = () => {
           </div>
         </div>
       </div>
-      <div id="experience"className="experience">
-      <div className="experience-content">
-            <div className="experience-container">
-              <img src="/assets/reccsar.jpg" alt="IITM GIF" />
-            </div>
-            <div className="text-content"><p>
-            <h2>Reccsar Private Limited</h2>
-              <h4>Remote Internship</h4>•
-            Successfully completed a 6-month remote internship in Fullstack Web
-            Development utilizing the MERN stack. <br />
-            • Focused on mastering React
-            and MongoDB through web page development, contributing to robust web
-            apps</p>
-              </div>
-            
+      <div id="experience" className="experience">
+        <div className="experience-content">
+          <div className="experience-container">
+            <img src="/assets/reccsar.jpg" alt="IITM GIF" />
           </div>
+          <div className="text-content">
+            <p>
+              <h2>Reccsar Private Limited</h2>
+              <h4>Remote Internship</h4>• Successfully completed a 6-month
+              remote internship in Fullstack Web Development utilizing the MERN
+              stack. <br />• Focused on mastering React and MongoDB through web
+              page development, contributing to robust web apps
+            </p>
           </div>
+        </div>
+      </div>
 
-      <div id="education" className="education">
+      <div id="education" >
         <h1>Education</h1>
-        <div className="about-content">
-          <div className="gif-container">
+        </div>
+        <div id="education" className="education">
+        <div className="education-content">
+          <div className="education-container">
             <img src="/assets/education.jpg" alt="About GIF" />
           </div>
           <div className="text-content">
             <h2>Psna College of Engineering and Technology</h2>
-            <h4>B.Tech Information Technologies</h4>
-            <p>
-              I am Currently pursing III yr B.Tech Information Technology in
-              PSNA
+            <h4>B.Tech Information Technology</h4>
+            <p><h6>
+              2021 – 2025, Dindigul
+              <br /><br />
+              Current CGPA - 8.77
+              <br />
+              <br /></h6>
+              <h3>School Education</h3>
+              St. Joseph’s Matric Hr Sec School , Dindigul
+              <h6>
+                HSC Percentage - 92.08
+                <br />
+                <br />
+                SSLC Percentage - 92.8
+              </h6>
             </p>
           </div>
         </div>
@@ -197,12 +208,20 @@ const Content = () => {
         <h1>Projects</h1>
       </div>
       <div id="projects" className="project">
-        <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />
-        <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />
-        <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />
-        <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />
-        <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />
-        <ImageOverlay imageUrl="/assets/homepage.jpg" text="Hello World" />
+        <ImageOverlay
+          imageUrl="/assets/project_1.jpg"
+          text="Hospital management system"
+        />
+        <ImageOverlay
+          imageUrl="/assets/project_dashboard.jpg"
+          text="project dashboard"
+        />
+        <ImageOverlay imageUrl="/assets/mart.jpg" text="Shopping mart" />
+        <ImageOverlay
+          imageUrl="/assets/microblogging.jpg"
+          text="microblogging"
+        />
+        <ImageOverlay imageUrl="/assets/resturant.jpg" text="Food Delivery " />
       </div>
 
       <div id="contact" className="footer">

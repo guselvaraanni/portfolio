@@ -1,19 +1,21 @@
-#experience {
+/* Corrected CSS with responsive image width */
+
+#education {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:black;
+    background-color: black;
     color: white;
     padding: 20px;
   }
   
-  .experience-content {
+  .education-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
   
-  .experience-container {
+  .education-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,19 +25,19 @@
     margin-left: 20px;
   }
   
-  #experience h2 {
+  #education h2 {
     font-size: 24px;
-    color:white;
+    color: white;
   }
   
-  #experience h4 {
+  #education h4 {
     font-size: 18px;
     color: white;
   }
   
-  #experience p {
+  #education p {
     font-size: 16px;
-    color:white;
+    color: white;
     opacity: 0;
     animation: fadeIn 3s forwards;
   }
@@ -49,13 +51,13 @@
     }
   }
   
-  #experience img {
-    max-width: 350px;
+  #education img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
     border-radius: 0%;
     margin-bottom: 10px;
     animation: bounce 1s infinite alternate;
   }
-  
   
   /* Animation */
   @keyframes bounce {
@@ -69,12 +71,13 @@
   
   /* Media Queries */
   @media screen and (max-width: 768px) {
-    #experience {
+    #education {
       flex-direction: column;
     }
   
-    .experience-content {
+    .education-content {
       flex-direction: column;
+      max-width: 350px;
     }
   
     .text-content {
@@ -83,17 +86,15 @@
   }
   
   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    #experience h2 {
+    #education h2 {
       font-size: 20px;
     }
   
-    #experience h4 {
+    #education h4 {
       font-size: 16px;
     }
   
-    #experience p {
+    #education p {
       font-size: 14px;
     }
   }
-  
- 
